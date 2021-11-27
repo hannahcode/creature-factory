@@ -1,0 +1,47 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 1rem;
+  background-color: $pale-violet;
+  &__logo-link {
+    text-decoration: none;
+  }
+  &__logo-outline {
+    border: 3px solid $cherry-red;
+    outline: 3px solid $green;
+    padding: 0.25rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__logo-container {
+    border: 3px solid $mustard;
+    outline: 3px solid $blue;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  &__logo {
+    color: $cherry-red;
+    font-family: fredoka-one;
+    margin: 0.25rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $cherry-red;
+    font-family: fredoka-one;
+    &:last-of-type {
+      padding-left: 3rem;
+    }
+  }
+}
