@@ -19,12 +19,7 @@
     display: flex;
     justify-content: center;
   }
-
-  &__machine-sections {
-  }
-
-  &__machine-section {
-    border: 1px solid black;
+  &__machine-parts-section {
   }
 
   &__machine-buttons {
@@ -36,6 +31,5 @@
   }
 
   &__create-button {
-    
   }
 }
