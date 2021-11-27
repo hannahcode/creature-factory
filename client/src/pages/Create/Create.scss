@@ -2,3 +2,40 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
+
+.create {
+  padding: 0 1rem;
+
+  &__title {
+  }
+
+  &__label {
+  }
+
+  &__input {
+  }
+
+  &__machine {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__machine-sections {
+  }
+
+  &__machine-section {
+    border: 1px solid black;
+  }
+
+  &__machine-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__machine-button {
+  }
+
+  &__create-button {
+    
+  }
+}
