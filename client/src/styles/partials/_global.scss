@@ -1,0 +1,10 @@
+@use "./variables" as *;
+@use "./typography" as *;
+
+* {
+  font-family: varela-round;
+  color: $charcoal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
