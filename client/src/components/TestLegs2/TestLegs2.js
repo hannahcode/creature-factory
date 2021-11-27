@@ -1,6 +1,6 @@
 export default function TestLegs() {
   return (
-    <g g transform="translate(50, 200)">
+    <g transform="translate(50, 200)">
       <g transform="translate(0, -10)">
         <g transform="translate(-5,0)">
           <path

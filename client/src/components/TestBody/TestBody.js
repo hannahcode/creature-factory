@@ -7,7 +7,7 @@ export default function TestBody() {
         r="8"
         fill="#B7C8B5"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <circle
         cx="91"
@@ -15,7 +15,7 @@ export default function TestBody() {
         r="8"
         fill="#B7C8B5"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <rect
         x="2.5"
@@ -26,7 +26,7 @@ export default function TestBody() {
         height="100"
         stroke="black"
         fill="#54414E"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <rect
         x="74.5"
@@ -37,7 +37,7 @@ export default function TestBody() {
         height="100"
         stroke="black"
         fill="#54414E"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <rect
         x="12.5"
@@ -48,7 +48,7 @@ export default function TestBody() {
         height="120"
         stroke="black"
         fill="#54414E"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </g>
   );

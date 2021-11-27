@@ -1,12 +1,12 @@
 export default function TestHead() {
   return (
-    <g g transform="translate(50, 0)">
+    <g transform="translate(50, 0)">
       <circle
         cx="50"
         cy="54"
         r="45"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="#35A7FF"
       />
       <circle
@@ -14,7 +14,7 @@ export default function TestHead() {
         cy="50"
         r="8"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="white"
       />
       <circle
@@ -22,7 +22,7 @@ export default function TestHead() {
         cy="50"
         r="8"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="white"
       />
       <circle
@@ -30,7 +30,7 @@ export default function TestHead() {
         cy="50"
         r="5"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="black"
       />
       <circle
@@ -38,7 +38,7 @@ export default function TestHead() {
         cy="50"
         r="5"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="black"
       />
       <circle
@@ -46,7 +46,7 @@ export default function TestHead() {
         cy="49"
         r="2"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="white"
       />
       <circle
@@ -54,13 +54,13 @@ export default function TestHead() {
         cy="49"
         r="2"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="white"
       />
       <path
         d="M 35 65 C 60 70, 60 60, 70 65"
         stroke="black"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         fill="transparent"
       />
       <polygon points="60,65 65,64 60,75" fill="white" stroke="black" />
