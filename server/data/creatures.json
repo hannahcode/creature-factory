@@ -1,1 +1,23 @@
-[{"id":12211212,"name":"name of creature","head":"head-1","body":"body-2","legs":"legs-1"},{"id":"d6025ede-6293-4d08-9762-9242e9e4c622","name":"name of creature","head":"head-1","body":"body-2","legs":"legs-1"},{"id":"adb9c8d8-9c89-482e-9d33-1bf32f044b80","name":"another new one","head":"head-1","body":"body-5","legs":"legs-2"}]
+[
+  {
+    "id": "90042e9c-81b8-4c1d-a0d8-7e47b94315e3",
+    "name": "my creature",
+    "head": 1,
+    "body": 1,
+    "legs": 1
+  },
+  {
+    "id": "56f9eba6-4f8b-431e-a38a-28b236e1d127",
+    "name": "my creature",
+    "head": 1,
+    "body": 1,
+    "legs": 1
+  },
+  {
+    "id": "ba08b677-4c8a-434c-872b-6b888ffb1430",
+    "name": "my other creature",
+    "head": 1,
+    "body": 0,
+    "legs": 0
+  }
+]

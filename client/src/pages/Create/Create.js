@@ -5,17 +5,25 @@ import TestLegs from "../../components/TestLegs/TestLegs";
 import TestHead2 from "../../components/TestHead2/TestHead2";
 import TestBody2 from "../../components/TestBody2/TestBody2";
 import TestLegs2 from "../../components/TestLegs2/TestLegs2";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
+const apiUrl = "http://localhost:8081/creatures/";
 
 const headArray = [<TestHead />, <TestHead2 />];
 const bodyArray = [<TestBody />, <TestBody2 />];
 const legsArray = [<TestLegs />, <TestLegs2 />];
 
 export default function Create() {
-  // const [name, setName] = useState({name: ""})
+  const [name, setName] = useState("");
   const [head, setHead] = useState(0);
   const [body, setBody] = useState(0);
   const [legs, setLegs] = useState(0);
+
+  const handleChange = (event) => {
+    setName(event.target.value);
+    console.log(name);
+  };
 
   const handleHead = () => {
     if (head >= headArray.length - 1) {
@@ -44,6 +52,20 @@ export default function Create() {
     console.log(legs);
   };
 
+  const handleCreate = () => {
+    const newCreature = { name: name, head: head, body: body, legs: legs };
+    console.log(newCreature);
+    if (!name) {
+      return;
+    }
+    axios
+      .post(`${apiUrl}`, newCreature)
+      .then(console.log("success"))
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <section className="create">
       <h2 className="create__title">Create your creature!</h2>
@@ -55,6 +77,7 @@ export default function Create() {
         type="text"
         placeholder="give your creature a name"
         className="create__input"
+        onChange={handleChange}
       ></input>
       <section className="create__machine">
         <div className="create__machine-parts-section">
@@ -76,7 +99,9 @@ export default function Create() {
           </button>
         </div>
       </section>
-      <button className="create__create-button">Create!</button>
+      <button className="create__create-button" onClick={handleCreate}>
+        Create!
+      </button>
     </section>
   );
 }
