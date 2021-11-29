@@ -1,32 +1,44 @@
 import "./Gallery.scss";
-// import TestHead from "../../components/TestHead/TestHead";
-// import TestBody from "../../components/TestBody/TestBody";
-// import TestLegs from "../../components/TestLegs/TestLegs";
-// import TestHead2 from "../../components/TestHead2/TestHead2";
-// import TestBody2 from "../../components/TestBody2/TestBody2";
-// import TestLegs2 from "../../components/TestLegs2/TestLegs2";
-import React, { useEffect } from "react";
+import TestHead from "../../components/TestHead/TestHead";
+import TestBody from "../../components/TestBody/TestBody";
+import TestLegs from "../../components/TestLegs/TestLegs";
+import TestHead2 from "../../components/TestHead2/TestHead2";
+import TestBody2 from "../../components/TestBody2/TestBody2";
+import TestLegs2 from "../../components/TestLegs2/TestLegs2";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const apiUrl = "http://localhost:8081/creatures/";
 
-// const headArray = [<TestHead />, <TestHead2 />];
-// const bodyArray = [<TestBody />, <TestBody2 />];
-// const legsArray = [<TestLegs />, <TestLegs2 />];
+const headArray = [<TestHead />, <TestHead2 />];
+const bodyArray = [<TestBody />, <TestBody2 />];
+const legsArray = [<TestLegs />, <TestLegs2 />];
 
 export default function Gallery() {
-  let creatures = [];
-
-  const getCreatures = () => {
-    axios.get(`${apiUrl}`).then((response) => {
-      creatures = response.data;
-      console.log(creatures);
-    });
-  };
+  const [creatures, setCreatures] = useState([]);
 
   useEffect(() => {
-    getCreatures();
-  });
+    axios.get(`${apiUrl}`).then((response) => {
+      setCreatures(response.data);
+      console.log(creatures);
+    });
+  }, []);
 
-  return <h2>This is the gallery page</h2>;
+  return (
+    <section>
+      <h2>This is the gallery page</h2>
+      {creatures.map((creature) => {
+        return (
+          <div key={creature.id}>
+            <h2>{creature.name}</h2>
+            <svg width="200" height="500">
+              {legsArray[creature.legs]}
+              {bodyArray[creature.body]}
+              {headArray[creature.head]}
+            </svg>
+          </div>
+        );
+      })}
+    </section>
+  );
 }
