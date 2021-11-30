@@ -25,20 +25,24 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section>
-      <h2>This is the gallery page</h2>
-      {creatures.map((creature) => {
-        return (
-          <div key={creature.id}>
-            <h2>{creature.name}</h2>
-            <svg width="200" height="500">
-              {legsArray[creature.legs]}
-              {bodyArray[creature.body]}
-              {headArray[creature.head]}
-            </svg>
-          </div>
-        );
-      })}
+    <section className="gallery">
+      <h2 className="gallery__title">Creatures</h2>
+      <section className="gallery__creatures">
+        {creatures.map((creature) => {
+          return (
+            <div key={creature.id} className="gallery__creature">
+              <h2 className="gallery__creature-title">{creature.name}</h2>
+              <svg width="133.33" height="233.33">
+                <g transform="scale(.66)">
+                  {legsArray[creature.legs]}
+                  {bodyArray[creature.body]}
+                  {headArray[creature.head]}
+                </g>
+              </svg>
+            </div>
+          );
+        })}
+      </section>
     </section>
   );
 }
