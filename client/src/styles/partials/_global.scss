@@ -2,7 +2,7 @@
 @use "./typography" as *;
 
 * {
-  font-family: varela-round;
+  font-family: $font-body;
   color: $charcoal;
   box-sizing: border-box;
   padding: 0;

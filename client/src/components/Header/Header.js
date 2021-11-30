@@ -9,9 +9,7 @@ export default function Header() {
           <div className="header__logo-outline">
             <div className="header__logo-container">
               {" "}
-              <h3 className="header__logo">
-                Creature <br /> Factory
-              </h3>
+              <h3 className="header__logo">Creature Factory</h3>
             </div>
           </div>
         </Link>

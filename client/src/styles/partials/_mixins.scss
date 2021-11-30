@@ -1,5 +1,21 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
 @mixin mQ($width) {
   @media (min-width: $width) {
     @content;
   }
+}
+
+@mixin button {
+  border: none;
+  padding: 0.4rem;
+  font-size: 0.613rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: $cherry-red;
+  color: white;
+  border-radius: 4px;
 }

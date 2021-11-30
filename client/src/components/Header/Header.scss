@@ -4,14 +4,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  background-color: $pale-violet;
+  background-color: #ffeca9;
 
   &__content-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0.5rem 1rem;
-    
+
     @include mQ($breakpoint-tablet) {
       flex-direction: row;
       justify-content: space-between;
@@ -23,15 +22,15 @@
 
   &__logo-link {
     text-decoration: none;
-    width: 9.375rem;
+    // width: 9.375rem;
     text-align: center;
   }
 
   &__logo-outline {
     border: 3px solid $cherry-red;
     outline: 3px solid $green;
-    padding: 0.25rem;
-    border-radius: 5px;
+    padding: 0.3rem;
+    border-radius: 12px;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -39,26 +38,35 @@
   &__logo-container {
     border: 3px solid $mustard;
     outline: 3px solid $blue;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 5px;
   }
 
   &__logo {
     color: $cherry-red;
-    font-family: fredoka-one;
-    font-size: 1rem;
-    margin: 0.25rem;
+    font-family: creepster;
+    font-size: 1.125rem;
+    // margin: 0.25rem;
   }
 
   &__nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background-color: #ffe381;
+
+    @include mQ($breakpoint-tablet) {
+      width: auto;
+      background-color: transparent;
+    }
   }
 
   &__nav-link {
     text-decoration: none;
     color: $cherry-red;
-    font-family: fredoka-one;
+    font-family: creepster;
     font-size: 0.875rem;
 
     &:last-of-type {

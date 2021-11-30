@@ -69,41 +69,45 @@ export default function Create() {
   return (
     <section className="create">
       <h2 className="create__title">Create your creature!</h2>
-      <div className="create__name-container">
-        <label htmlFor="name" className="create__label">
-          Name:
-        </label>
-        <input
-          id="name"
-          type="text"
-          placeholder="give your creature a name"
-          className="create__input"
-          onChange={handleChange}
-        ></input>
+      <div className="create__container">
+        <div className="create__name-container">
+          <label htmlFor="name" className="create__label">
+            Name
+          </label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Give your creature a name"
+            className="create__input"
+            onChange={handleChange}
+          ></input>
+        </div>
+        <section className="create__machine">
+          <div className="create__machine-parts-section">
+            <svg width="200" height="350">
+              {legsArray[legs]}
+              {bodyArray[body]}
+              {headArray[head]}
+            </svg>
+          </div>
+          <aside className="create__aside-container">
+            <div className="create__machine-buttons">
+              <button className="create__machine-button" onClick={handleHead}>
+                Change head
+              </button>
+              <button className="create__machine-button" onClick={handleBody}>
+                Change body
+              </button>
+              <button className="create__machine-button" onClick={handleLegs}>
+                Change legs
+              </button>
+            </div>
+            <button className="create__create-button" onClick={handleCreate}>
+              Create!
+            </button>
+          </aside>
+        </section>
       </div>
-      <section className="create__machine">
-        <div className="create__machine-parts-section">
-          <svg width="200" height="350">
-            {legsArray[legs]}
-            {bodyArray[body]}
-            {headArray[head]}
-          </svg>
-        </div>
-        <div className="create__machine-buttons">
-          <button className="create__machine-button" onClick={handleHead}>
-            Change head
-          </button>
-          <button className="create__machine-button" onClick={handleBody}>
-            Change body
-          </button>
-          <button className="create__machine-button" onClick={handleLegs}>
-            Change legs
-          </button>
-        </div>
-      </section>
-      <button className="create__create-button" onClick={handleCreate}>
-        Create!
-      </button>
     </section>
   );
 }

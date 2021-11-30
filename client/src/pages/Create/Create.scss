@@ -7,40 +7,53 @@
   padding: 0 1rem;
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     padding: 1.5rem 0 1rem;
+    font-family: creepster;
+  }
+
+  &__container {
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   &__name-container {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
 
   &__label {
-    background-color: $pale-violet;
     color: $charcoal;
-    padding: 0.25rem;
-    font-size: 0.875rem;
+    font-size: 0.613rem;
     margin-right: 0.5rem;
+    font-weight: bold;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__input {
     font-size: 0.813rem;
     flex-grow: 1;
-    padding-left: 1rem;
+    padding: 0.5rem;
     border-radius: 0;
-    border: solid 1px $charcoal;
+    border: solid 1px $border-color;
+    border-radius: 4px;
+    width: 100%;
   }
 
   &__machine {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 1rem;
   }
   &__machine-parts-section {
-    border: solid 1px $charcoal;
-    margin: 1rem 1rem 0.5rem 0;
+    margin-right: 1rem;
+  }
+
+  &__aside-container {
+    display: flex;
+    flex-direction: column;
   }
 
   &__machine-buttons {
@@ -50,18 +63,11 @@
   }
 
   &__machine-button {
-    border: none;
-    margin-top: 1rem;
-    padding: 0.4rem;
-    font-size: 0.875rem;
-    background-color: $pale-violet;
+    margin-bottom: 1rem;
+    @include button;
   }
 
   &__create-button {
-    border: none;
-    margin-top: 1rem;
-    padding: 0.4rem;
-    font-size: 0.875rem;
-    background-color: $pale-violet;
+    @include button;
   }
 }
