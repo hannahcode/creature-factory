@@ -1,9 +1,1 @@
-[
-  {
-    "id": "a0969660-3c6b-49c5-aebe-01c43cdb35bc",
-    "name": "new one",
-    "head": "head1",
-    "body": "body1",
-    "legs": "legs1"
-  }
-]
+[{"id":"a0969660-3c6b-49c5-aebe-01c43cdb35bc","name":"new one","head":"head1","body":"body1","legs":"legs1"},{"id":"2de841e9-7db3-484f-8d67-d02cbb81055f","name":"creature wow","head":"head2","body":"body1","legs":"legs2"},{"id":"8d588080-f6c8-4326-a4e7-a94b088bbec5","name":"hannah","head":"head1","body":"body2","legs":"legs1"}]
