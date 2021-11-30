@@ -69,19 +69,21 @@ export default function Create() {
   return (
     <section className="create">
       <h2 className="create__title">Create your creature!</h2>
-      <label htmlFor="name" className="create__label">
-        Name:
-      </label>
-      <input
-        id="name"
-        type="text"
-        placeholder="give your creature a name"
-        className="create__input"
-        onChange={handleChange}
-      ></input>
+      <div className="create__name-container">
+        <label htmlFor="name" className="create__label">
+          Name:
+        </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="give your creature a name"
+          className="create__input"
+          onChange={handleChange}
+        ></input>
+      </div>
       <section className="create__machine">
         <div className="create__machine-parts-section">
-          <svg width="200" height="500">
+          <svg width="200" height="350">
             {legsArray[legs]}
             {bodyArray[body]}
             {headArray[head]}
