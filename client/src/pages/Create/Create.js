@@ -8,15 +8,19 @@ import { Legs } from "../../components/Legs";
 
 const apiUrl = "http://localhost:8081/creatures/";
 
-const headArray = [Heads.head1, Heads.head2, Heads.head3];
-const bodyArray = [Bodies.body1, Bodies.body2];
-const legsArray = [Legs.legs1, Legs.legs2];
-
 export default function Create() {
   const [name, setName] = useState("");
   const [head, setHead] = useState(0);
   const [body, setBody] = useState(0);
   const [legs, setLegs] = useState(0);
+
+  const headKeys = Object.keys(Heads);
+  const bodiesKeys = Object.keys(Bodies);
+  const legsKeys = Object.keys(Legs);
+
+  const currentLegs = Object.keys(Legs)[legs];
+  const currentBody = Object.keys(Bodies)[body];
+  const currentHead = Object.keys(Heads)[head];
 
   const handleChange = (event) => {
     setName(event.target.value);
@@ -24,7 +28,7 @@ export default function Create() {
   };
 
   const handleHead = () => {
-    if (head >= headArray.length - 1) {
+    if (head >= headKeys.length - 1) {
       setHead(0);
       return;
     }
@@ -33,7 +37,7 @@ export default function Create() {
   };
 
   const handleBody = () => {
-    if (body >= bodyArray.length - 1) {
+    if (body >= bodiesKeys.length - 1) {
       setBody(0);
       return;
     }
@@ -42,7 +46,7 @@ export default function Create() {
   };
 
   const handleLegs = () => {
-    if (legs >= legsArray.length - 1) {
+    if (legs >= legsKeys.length - 1) {
       setLegs(0);
       return;
     }
@@ -51,7 +55,7 @@ export default function Create() {
   };
 
   const handleCreate = () => {
-    const newCreature = { name: name, head: head, body: body, legs: legs };
+    const newCreature = { name: name, head: currentHead, body: currentBody, legs: currentLegs };
     console.log(newCreature);
     if (!name) {
       return;
@@ -83,9 +87,9 @@ export default function Create() {
         <section className="create__machine">
           <div className="create__machine-parts-section">
             <svg width="200" height="350">
-              {legsArray[legs]}
-              {bodyArray[body]}
-              {headArray[head]}
+              {Legs[currentLegs]}
+              {Bodies[currentBody]}
+              {Heads[currentHead]}
             </svg>
           </div>
           <aside className="create__aside-container">

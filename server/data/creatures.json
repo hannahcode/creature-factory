@@ -1,1 +1,44 @@
-[{"id":"90042e9c-81b8-4c1d-a0d8-7e47b94315e3","name":"my creature","head":1,"body":1,"legs":1},{"id":"56f9eba6-4f8b-431e-a38a-28b236e1d127","name":"my creature","head":1,"body":1,"legs":1},{"id":"ba08b677-4c8a-434c-872b-6b888ffb1430","name":"my other creature","head":1,"body":0,"legs":0},{"id":"1dcb6612-1baa-4b83-9a82-dbb03524b827","name":"Hannah's newest creature","head":1,"body":1,"legs":0},{"id":"e65a8eef-986f-4333-b1b9-3735c0cee469","name":"hannah critter","head":0,"body":0,"legs":0}]
+[
+  {
+    "id": "90042e9c-81b8-4c1d-a0d8-7e47b94315e3",
+    "name": "my creature",
+    "head": 1,
+    "body": 1,
+    "legs": 1
+  },
+  {
+    "id": "56f9eba6-4f8b-431e-a38a-28b236e1d127",
+    "name": "my creature",
+    "head": 1,
+    "body": 1,
+    "legs": 1
+  },
+  {
+    "id": "ba08b677-4c8a-434c-872b-6b888ffb1430",
+    "name": "my other creature",
+    "head": 1,
+    "body": 0,
+    "legs": 0
+  },
+  {
+    "id": "1dcb6612-1baa-4b83-9a82-dbb03524b827",
+    "name": "Hannah's newest creature",
+    "head": 1,
+    "body": 1,
+    "legs": 0
+  },
+  {
+    "id": "e65a8eef-986f-4333-b1b9-3735c0cee469",
+    "name": "hannah critter",
+    "head": 0,
+    "body": 0,
+    "legs": 0
+  },
+  {
+    "id": "a0969660-3c6b-49c5-aebe-01c43cdb35bc",
+    "name": "new one",
+    "head": "head1",
+    "body": "body1",
+    "legs": "legs1"
+  }
+]
