@@ -10,31 +10,43 @@
     text-align: center;
     padding: 1.5rem 0 1rem;
     font-family: creepster;
+    @include mQ($breakpoint-tablet) {
+      font-size: 2.5rem;
+      padding: 1.75rem 0 1.25rem;
+    }
   }
 
   &__creatures {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1020px;
+    margin: 0 auto;
+    @include mQ($breakpoint-tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__creature {
     width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid $border-color;
-    // &:nth-child(odd) {
-    //   background-color: #fffbe8;
-    // }
+    border: 3px solid #ffe381;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-width: 288px;
+    @include mQ($breakpoint-tablet) {
+      margin: 1.25rem;
+    }
   }
 
   &__creature-title {
     font-size: 0.813rem;
     text-align: center;
-    text-transform: uppercase;
     font-weight: 700;
   }
 }
