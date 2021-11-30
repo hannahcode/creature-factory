@@ -1,18 +1,16 @@
 import "./Create.scss";
-import TestHead from "../../components/TestHead/TestHead";
-import TestBody from "../../components/TestBody/TestBody";
-import TestLegs from "../../components/TestLegs/TestLegs";
-import TestHead2 from "../../components/TestHead2/TestHead2";
-import TestBody2 from "../../components/TestBody2/TestBody2";
-import TestLegs2 from "../../components/TestLegs2/TestLegs2";
+
 import React, { useState } from "react";
 import axios from "axios";
+import { Heads } from "../../components/Heads";
+import { Bodies } from "../../components/Bodies";
+import { Legs } from "../../components/Legs";
 
 const apiUrl = "http://localhost:8081/creatures/";
 
-const headArray = [<TestHead />, <TestHead2 />];
-const bodyArray = [<TestBody />, <TestBody2 />];
-const legsArray = [<TestLegs />, <TestLegs2 />];
+const headArray = [Heads.head1, Heads.head2, Heads.head3];
+const bodyArray = [Bodies.body1, Bodies.body2];
+const legsArray = [Legs.legs1, Legs.legs2];
 
 export default function Create() {
   const [name, setName] = useState("");

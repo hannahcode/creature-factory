@@ -1,10 +1,10 @@
 import "./Gallery.scss";
-import TestHead from "../../components/TestHead/TestHead";
-import TestBody from "../../components/TestBody/TestBody";
-import TestLegs from "../../components/TestLegs/TestLegs";
-import TestHead2 from "../../components/TestHead2/TestHead2";
-import TestBody2 from "../../components/TestBody2/TestBody2";
-import TestLegs2 from "../../components/TestLegs2/TestLegs2";
+import TestHead from "../../components/Heads/TestHead";
+import TestBody from "../../components/Bodies/TestBody";
+import TestLegs from "../../components/Legs/TestLegs";
+import TestHead2 from "../../components/Heads/TestHead2";
+import TestBody2 from "../../components/Bodies/TestBody2";
+import TestLegs2 from "../../components/Legs/TestLegs2";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
