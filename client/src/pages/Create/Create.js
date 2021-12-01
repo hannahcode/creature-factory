@@ -1,5 +1,5 @@
 import "./Create.scss";
-
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import { Heads } from "../../components/Heads";
@@ -55,7 +55,12 @@ export default function Create() {
   };
 
   const handleCreate = () => {
-    const newCreature = { name: name, head: currentHead, body: currentBody, legs: currentLegs };
+    const newCreature = {
+      name: name,
+      head: currentHead,
+      body: currentBody,
+      legs: currentLegs,
+    };
     console.log(newCreature);
     if (!name) {
       return;
@@ -104,9 +109,11 @@ export default function Create() {
                 Change legs
               </button>
             </div>
-            <button className="create__create-button" onClick={handleCreate}>
-              Create!
-            </button>
+            <Link to="/gallery">
+              <button className="create__create-button" onClick={handleCreate}>
+                Create!
+              </button>
+            </Link>
           </aside>
         </section>
       </div>
