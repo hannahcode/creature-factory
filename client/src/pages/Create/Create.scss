@@ -40,6 +40,16 @@
     border: solid 1px $border-color;
     border-radius: 4px;
     width: 100%;
+
+    &--invalid {
+      border: solid 1px $cherry-red;
+    }
+  }
+
+  &__error-message {
+    text-transform: uppercase;
+    font-size: 0.613rem;
+    color: $cherry-red;
   }
 
   &__machine {

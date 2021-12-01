@@ -13,6 +13,8 @@ export default function Create() {
   const [head, setHead] = useState(0);
   const [body, setBody] = useState(0);
   const [legs, setLegs] = useState(0);
+  const [valid, setValid] = useState(false);
+  const [error, setError] = useState(false);
 
   const headKeys = Object.keys(Heads);
   const bodiesKeys = Object.keys(Bodies);
@@ -24,7 +26,13 @@ export default function Create() {
 
   const handleChange = (event) => {
     setName(event.target.value);
+    if (event.target.value.length > 1) {
+      setValid(true);
+      return;
+    }
+    setValid(false);
     console.log(name);
+    console.log(valid);
   };
 
   const handleHead = () => {
@@ -62,7 +70,8 @@ export default function Create() {
       legs: currentLegs,
     };
     console.log(newCreature);
-    if (!name) {
+    if (!valid) {
+      setError(true);
       return;
     }
     axios
@@ -85,9 +94,16 @@ export default function Create() {
             id="name"
             type="text"
             placeholder="Give your creature a name"
-            className="create__input"
+            className={
+              error ? "create__input create__input--invalid" : "create__input"
+            }
             onChange={handleChange}
           ></input>
+          {error && (
+            <p className="create__error-message">
+              please include a name for your creature
+            </p>
+          )}
         </div>
         <section className="create__machine">
           <div className="create__machine-parts-section">
@@ -109,7 +125,7 @@ export default function Create() {
                 Change legs
               </button>
             </div>
-            <Link to="/gallery">
+            <Link to={valid ? "/gallery" : ""}>
               <button className="create__create-button" onClick={handleCreate}>
                 Create!
               </button>
