@@ -1,9 +1,7 @@
-import TestLegs from "./TestLegs";
-import TestLegs2 from "./TestLegs2";
-import Legs3 from "./Legs3";
+import SquidLegs from "./SquidLegs";
+import TripodLegs from "./TripodLegs";
 
 export const Legs = {
-  legs1: <TestLegs />,
-  legs2: <TestLegs2 />,
-  legs3: <Legs3 />,
+  squid: <SquidLegs />,
+  legs2: <TripodLegs />,
 };

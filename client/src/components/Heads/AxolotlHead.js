@@ -1,4 +1,4 @@
-export default function Head1() {
+export default function AxolotlHead() {
   return (
     <g transform="translate(50, 0)">
       <circle cx="10" cy="30" r="6" fill="#a8dadc" />

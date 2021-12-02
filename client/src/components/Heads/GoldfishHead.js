@@ -1,4 +1,4 @@
-export default function Head3() {
+export default function GoldfishHead() {
   return (
     <g transform="translate(50, 0)">
       <circle cx="95" cy="54" r="10" fill="#ffb703" stroke="#4cc9f0" />

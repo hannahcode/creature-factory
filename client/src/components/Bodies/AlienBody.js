@@ -1,4 +1,4 @@
-export default function Body1() {
+export default function AlienBody() {
   return (
     <g transform="translate(50, 85)">
       <rect

@@ -1,4 +1,4 @@
-export default function Body2() {
+export default function BearBody() {
   return (
     <g transform="translate(50, 85)">
       <rect

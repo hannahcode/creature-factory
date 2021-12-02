@@ -1,4 +1,4 @@
-export default function TestLegs() {
+export default function SquidLegs() {
   return (
     <g transform="translate(50, 200)">
       <g transform="translate(0, -10)">

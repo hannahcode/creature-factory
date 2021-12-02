@@ -1,4 +1,4 @@
-export default function Legs3() {
+export default function TripodLegs() {
   return (
     <g transform="translate(50, 200)">
       <g transform="translate(0, -10)">

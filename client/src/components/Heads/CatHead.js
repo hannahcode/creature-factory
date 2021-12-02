@@ -1,4 +1,4 @@
-export default function Head2() {
+export default function CatHead() {
   return (
     <g transform="translate(50, 5)">
       <circle cx="50" cy="50" r="45" fill="black" />
