@@ -2,5 +2,5 @@
 
 export const API_URL =
   process.env.NODE_ENV === "production"
-    ? "https://https://stormy-ocean-90176.herokuapp.com/"
+    ? "https://creature-factory.herokuapp.com/creatures"
     : "http://localhost:8081/creatures";
