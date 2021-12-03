@@ -4,13 +4,13 @@
   "description": "*creature factory is a capstone project for BrainStation's web development diploma program*",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd server && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm install --prefix client && npm install --prefix server && npm run build --prefix client"
   },
   "repository": {
-    "start": "cd server && node index.js",
     "type": "git",
-    "url": "git+https://github.com/hannahcode/creature-factory.git",
-    "heroku-postbuild": "npm install --prefix client && npm install --prefix server && npm run build --prefix client"
+    "url": "git+https://github.com/hannahcode/creature-factory.git"
   },
   "keywords": [],
   "author": "",
