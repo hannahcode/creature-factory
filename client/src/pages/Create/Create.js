@@ -1,5 +1,5 @@
 import "./Create.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import { Heads } from "../../components/Heads";
@@ -62,6 +62,8 @@ export default function Create() {
     console.log(legs);
   };
 
+  const navigate = useNavigate();
+
   const handleCreate = () => {
     const newCreature = {
       name: name,
@@ -76,7 +78,7 @@ export default function Create() {
     }
     axios
       .post(`${apiUrl}`, newCreature)
-      .then(console.log("success"))
+      .then(console.log("success"), navigate("/gallery"))
       .catch((error) => {
         console.error(error);
       });
@@ -125,11 +127,9 @@ export default function Create() {
                 Change legs
               </button>
             </div>
-            <Link to={valid ? "/gallery" : ""}>
-              <button className="create__create-button" onClick={handleCreate}>
-                Create!
-              </button>
-            </Link>
+            <button className="create__create-button" onClick={handleCreate}>
+              Create!
+            </button>
           </aside>
         </section>
       </div>
