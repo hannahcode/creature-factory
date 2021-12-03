@@ -4,7 +4,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  background-color: #ffeca9;
+  background-color: #000000;
 
   &__content-container {
     display: flex;
@@ -22,7 +22,6 @@
 
   &__logo-link {
     text-decoration: none;
-    // width: 9.375rem;
     text-align: center;
   }
 
@@ -46,7 +45,6 @@
     color: $cherry-red;
     font-family: creepster;
     font-size: 1.125rem;
-    // margin: 0.25rem;
   }
 
   &__nav {
@@ -55,7 +53,7 @@
     justify-content: center;
     padding: 0.5rem 1rem;
     width: 100%;
-    background-color: #ffe381;
+    background-color: $charcoal;
 
     @include mQ($breakpoint-tablet) {
       width: auto;

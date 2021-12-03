@@ -7,7 +7,6 @@ import axios from "axios";
 
 const apiUrl = "http://localhost:8081/creatures/";
 
-
 export default function Gallery() {
   const [creatures, setCreatures] = useState([]);
 
