@@ -4,6 +4,7 @@ const app = express();
 const creatureRoutes = require("./routes/creatures");
 const PORT = process.env.PORT || 8081;
 const cors = require("cors");
+const path = require("path");
 
 app.use(cors());
 
