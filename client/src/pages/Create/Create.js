@@ -30,8 +30,6 @@ export default function Create() {
       return;
     }
     setValid(false);
-    console.log(name);
-    console.log(valid);
   };
 
   const handleHead = () => {
@@ -40,7 +38,6 @@ export default function Create() {
       return;
     }
     setHead(head + 1);
-    console.log(head);
   };
 
   const handleBody = () => {
@@ -49,7 +46,6 @@ export default function Create() {
       return;
     }
     setBody(body + 1);
-    console.log(body);
   };
 
   const handleLegs = () => {
@@ -58,7 +54,6 @@ export default function Create() {
       return;
     }
     setLegs(legs + 1);
-    console.log(legs);
   };
 
   const navigate = useNavigate();
@@ -70,7 +65,6 @@ export default function Create() {
       body: currentBody,
       legs: currentLegs,
     };
-    console.log(newCreature);
     if (!valid) {
       setError(true);
       return;

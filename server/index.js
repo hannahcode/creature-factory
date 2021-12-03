@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const creatureRoutes = require("./routes/creatures");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8081;
 const cors = require("cors");
 
 app.use(cors());

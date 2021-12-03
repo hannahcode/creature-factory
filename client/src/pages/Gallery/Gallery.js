@@ -12,7 +12,6 @@ export default function Gallery() {
   useEffect(() => {
     axios.get(`${API_URL}`).then((response) => {
       setCreatures(response.data);
-      console.log(creatures);
     });
   }, []);
 
