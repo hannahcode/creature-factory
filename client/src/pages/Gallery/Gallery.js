@@ -4,14 +4,13 @@ import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-const apiUrl = "http://localhost:8081/creatures/";
+import { API_URL } from "../../config";
 
 export default function Gallery() {
   const [creatures, setCreatures] = useState([]);
 
   useEffect(() => {
-    axios.get(`${apiUrl}`).then((response) => {
+    axios.get(`${API_URL}`).then((response) => {
       setCreatures(response.data);
       console.log(creatures);
     });

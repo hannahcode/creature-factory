@@ -1,12 +1,11 @@
 import "./Create.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import { Heads } from "../../components/Heads";
 import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
-
-const apiUrl = "http://localhost:8081/creatures/";
+import { API_URL } from "../../config";
 
 export default function Create() {
   const [name, setName] = useState("");
@@ -77,7 +76,7 @@ export default function Create() {
       return;
     }
     axios
-      .post(`${apiUrl}`, newCreature)
+      .post(`${API_URL}`, newCreature)
       .then(console.log("success"), navigate("/gallery"))
       .catch((error) => {
         console.error(error);
