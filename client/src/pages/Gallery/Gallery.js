@@ -11,11 +11,31 @@ import { API_URL } from "../../config";
 export default function Gallery() {
   const [creatures, setCreatures] = useState([]);
 
+  const getCreatures = () => {
+    axios
+      .get(`${API_URL}`)
+      .then((response) => {
+        setCreatures(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   useEffect(() => {
-    axios.get(`${API_URL}`).then((response) => {
-      setCreatures(response.data);
-    });
+    getCreatures();
   }, []);
+
+  const handleUpvote = (event) => {
+    axios
+      .put(`${API_URL}/${event.target.id}/upvote`)
+      .then(() => {
+        getCreatures();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <section className="gallery">
@@ -37,12 +57,15 @@ export default function Gallery() {
                   src={upvote}
                   alt="up arrow to increase likes"
                   className="gallery__creature-upvote"
+                  onClick={handleUpvote}
+                  id={creature.id}
                 />
                 <p className="gallery__creature-likes">{creature.likes}</p>
                 <img
                   src={downvote}
                   alt="down arrow to decrease likes"
                   className="gallery__creature-downvote"
+                  id={creature.id}
                 />
               </div>
             </div>
