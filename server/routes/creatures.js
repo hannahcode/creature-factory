@@ -36,6 +36,11 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const { name, head, body, legs, likes } = req.body;
   // TODO add backend validation
+
+  if (!name || !head || !body || !legs || likes.length < 1) {
+    res.status(400).json({ error: "Missing creature data in request body." });
+  }
+
   const newCreature = {
     id: uuid.v4(),
     name: name,
@@ -98,7 +103,7 @@ router.put("/:id/downvote", (req, res) => {
       likes: likes,
     };
   });
-  
+
   writeCreatures(creatures);
 
   res.json(likeCount);
