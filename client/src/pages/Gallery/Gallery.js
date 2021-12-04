@@ -37,6 +37,17 @@ export default function Gallery() {
       });
   };
 
+  const handleDownvote = (event) => {
+    axios
+      .put(`${API_URL}/${event.target.id}/downvote`)
+      .then(() => {
+        getCreatures();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <section className="gallery">
       <h2 className="gallery__title">Creatures</h2>
@@ -65,6 +76,7 @@ export default function Gallery() {
                   src={downvote}
                   alt="down arrow to decrease likes"
                   className="gallery__creature-downvote"
+                  onClick={handleDownvote}
                   id={creature.id}
                 />
               </div>
