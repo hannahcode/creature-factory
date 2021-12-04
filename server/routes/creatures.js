@@ -61,6 +61,11 @@ router.put("/:id/upvote", (req, res) => {
   const id = req.params.id;
   let likeCount;
 
+  if (!creatures.some((creature) => creature.id === id)) {
+    res.status(400).json({ error: "Creature ID not found." });
+    return;
+  }
+
   function addLike(likes) {
     let updatedLikes = likes + 1;
     return updatedLikes;
@@ -82,8 +87,6 @@ router.put("/:id/upvote", (req, res) => {
 
   res.json(likeCount);
 });
-
-// res.status(400).json({ error: "Creature ID not found." });
 
 router.put("/:id/downvote", (req, res) => {
   const id = req.params.id;
