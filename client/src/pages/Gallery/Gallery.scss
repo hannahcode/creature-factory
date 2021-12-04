@@ -39,6 +39,7 @@
     border-radius: 8px;
     margin-bottom: 1rem;
     max-width: 288px;
+    position: relative;
     @include mQ($breakpoint-tablet) {
       margin: 1.25rem;
     }
@@ -48,5 +49,19 @@
     font-size: 0.813rem;
     text-align: center;
     font-weight: 700;
+  }
+
+  &__creature-likes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+  }
+  &__creature-upvote {
+  }
+  &__creature-likes {
+  }
+  &__creature-downvote {
   }
 }

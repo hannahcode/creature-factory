@@ -2,6 +2,8 @@ import "./Gallery.scss";
 import { Heads } from "../../components/Heads";
 import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
+import upvote from "../../assets/icons/expand_less_black_24dp.svg";
+import downvote from "../../assets/icons/expand_more_black_24dp.svg";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API_URL } from "../../config";
@@ -30,6 +32,19 @@ export default function Gallery() {
                   {Heads[creature.head]}
                 </g>
               </svg>
+              <div className="gallery__creature-likes-container">
+                <img
+                  src={upvote}
+                  alt="up arrow to increase likes"
+                  className="gallery__creature-upvote"
+                />
+                <p className="gallery__creature-likes">{creature.likes}</p>
+                <img
+                  src={downvote}
+                  alt="down arrow to decrease likes"
+                  className="gallery__creature-downvote"
+                />
+              </div>
             </div>
           );
         })}
