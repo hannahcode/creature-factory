@@ -31,22 +31,50 @@ const writeCreatures = (data) => {
 router.get("/", (req, res) => {
   res.json(creatures);
 });
+//TODO add stuff in case of error as well as status codes to each endpoint
 
 router.post("/", (req, res) => {
-  const { name, head, body, legs } = req.body;
-
+  const { name, head, body, legs, likes } = req.body;
+  // TODO add backend validation
   const newCreature = {
     id: uuid.v4(),
     name: name,
     head: head,
     body: body,
     legs: legs,
+    likes: likes,
   };
 
   creatures.push(newCreature);
   writeCreatures(creatures);
 
   res.json(newCreature);
+});
+
+router.put("/:id/upvote", (req, res) => {
+  const id = req.params.id;
+  let likeCount;
+
+  function addLike(likes) {
+    let updatedLikes = likes + 1;
+    return updatedLikes;
+  }
+
+  creatures = creatures.map((creature) => {
+    let likes = creature.likes;
+
+    if (id === creature.id) {
+      likes = addLike(likes);
+      likeCount = likes;
+    }
+    return {
+      ...creature,
+      likes: likes,
+    };
+  });
+  writeCreatures(creatures);
+
+  res.json(likeCount);
 });
 
 module.exports = router;
