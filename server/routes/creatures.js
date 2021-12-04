@@ -77,4 +77,31 @@ router.put("/:id/upvote", (req, res) => {
   res.json(likeCount);
 });
 
+router.put("/:id/downvote", (req, res) => {
+  const id = req.params.id;
+  let likeCount;
+
+  function addLike(likes) {
+    let updatedLikes = likes - 1;
+    return updatedLikes;
+  }
+
+  creatures = creatures.map((creature) => {
+    let likes = creature.likes;
+
+    if (id === creature.id) {
+      likes = addLike(likes);
+      likeCount = likes;
+    }
+    return {
+      ...creature,
+      likes: likes,
+    };
+  });
+  
+  writeCreatures(creatures);
+
+  res.json(likeCount);
+});
+
 module.exports = router;

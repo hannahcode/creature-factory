@@ -1,10 +1,1 @@
-[
-  {
-    "id": "9793fa07-d738-4e45-969c-d5cfe1654888",
-    "name": "favorite creature",
-    "head": "axolotl",
-    "body": "alien",
-    "legs": "squid",
-    "likes": 1
-  }
-]
+[{"id":"9793fa07-d738-4e45-969c-d5cfe1654888","name":"favorite creature","head":"axolotl","body":"alien","legs":"squid","likes":1}]
