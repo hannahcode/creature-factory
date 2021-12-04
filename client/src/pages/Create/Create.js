@@ -64,6 +64,7 @@ export default function Create() {
       head: currentHead,
       body: currentBody,
       legs: currentLegs,
+      likes: 0,
     };
     if (!valid) {
       setError(true);

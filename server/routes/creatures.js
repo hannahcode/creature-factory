@@ -31,11 +31,9 @@ const writeCreatures = (data) => {
 router.get("/", (req, res) => {
   res.json(creatures);
 });
-//TODO add stuff in case of error as well as status codes to each endpoint
 
 router.post("/", (req, res) => {
   const { name, head, body, legs, likes } = req.body;
-  // TODO add backend validation
 
   if (!name || !head || !body || !legs || likes.length < 1) {
     res.status(400).json({ error: "Missing creature data in request body." });
