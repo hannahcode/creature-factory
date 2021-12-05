@@ -56,7 +56,7 @@ export default function GalleryItem({
           src={upvote}
           alt="up arrow to increase likes"
           className="gallery__creature-upvote"
-          onClick={() => handleDownvote(creature.id)}
+          onClick={() => handleUpvote(creature.id)}
           id={creature.id}
         />
         <p className="gallery__creature-likes">{creature.likes}</p>
@@ -64,7 +64,7 @@ export default function GalleryItem({
           src={downvote}
           alt="down arrow to decrease likes"
           className="gallery__creature-downvote"
-          onClick={() => handleUpvote(creature.id)}
+          onClick={() => handleDownvote(creature.id)}
           id={creature.id}
         />
       </div>

@@ -22,9 +22,9 @@ export default function Gallery() {
     getCreatures();
   }, []);
 
-  const handleUpvote = (event) => {
+  const handleUpvote = (id) => {
     axios
-      .put(`${API_URL}/${event.target.id}/upvote`)
+      .put(`${API_URL}/${id}/upvote`)
       .then(() => {
         getCreatures();
       })
