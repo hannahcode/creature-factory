@@ -4,7 +4,7 @@ import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
 import upvote from "../../assets/icons/expand_less_black_24dp.svg";
 import downvote from "../../assets/icons/expand_more_black_24dp.svg";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import html2canvas from "html2canvas";
 import { API_URL } from "../../config";
@@ -86,7 +86,11 @@ export default function Gallery() {
                   </g>
                 </svg>
               </div>
-              <button type="button" onClick={handleDownloadImage}>
+              <button
+                type="button"
+                onClick={handleDownloadImage}
+                className="gallery__download-button"
+              >
                 Download Creature
               </button>
               <div className="gallery__creature-likes-container">
