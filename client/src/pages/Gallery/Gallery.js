@@ -51,6 +51,7 @@ export default function Gallery() {
         {creatures.map((creature) => {
           return (
             <GalleryItem
+              key={creature.id}
               creature={creature}
               handleDownvote={handleDownvote}
               handleUpvote={handleUpvote}
