@@ -4,12 +4,14 @@ import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
 import upvote from "../../assets/icons/expand_less_black_24dp.svg";
 import downvote from "../../assets/icons/expand_more_black_24dp.svg";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import html2canvas from "html2canvas";
 import { API_URL } from "../../config";
 
 export default function Gallery() {
   const [creatures, setCreatures] = useState([]);
+  const printRef = React.useRef();
 
   const getCreatures = () => {
     axios
@@ -25,6 +27,25 @@ export default function Gallery() {
   useEffect(() => {
     getCreatures();
   }, []);
+
+  const handleDownloadImage = async () => {
+    const element = printRef.current;
+    const canvas = await html2canvas(element);
+
+    const data = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+
+    if (typeof link.download === "string") {
+      link.href = data;
+      link.download = "image.png";
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(data);
+    }
+  };
 
   const handleUpvote = (event) => {
     axios
@@ -55,14 +76,19 @@ export default function Gallery() {
         {creatures.map((creature) => {
           return (
             <div key={creature.id} className="gallery__creature">
-              <h2 className="gallery__creature-title">{creature.name}</h2>
-              <svg width="133.33" height="233.33">
-                <g transform="scale(.66)">
-                  {Legs[creature.legs]}
-                  {Bodies[creature.body]}
-                  {Heads[creature.head]}
-                </g>
-              </svg>
+              <div className="gallery__print-container" ref={printRef}>
+                <h2 className="gallery__creature-title">{creature.name}</h2>
+                <svg width="133.33" height="233.33">
+                  <g transform="scale(.66)">
+                    {Legs[creature.legs]}
+                    {Bodies[creature.body]}
+                    {Heads[creature.head]}
+                  </g>
+                </svg>
+              </div>
+              <button type="button" onClick={handleDownloadImage}>
+                Download Creature
+              </button>
               <div className="gallery__creature-likes-container">
                 <img
                   src={upvote}
