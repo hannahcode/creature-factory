@@ -1,5 +1,7 @@
 # Creature Factory
 
+![image](https://user-images.githubusercontent.com/70654324/144891754-9ef98aa9-7e49-485a-8d9d-18d4c09f7443.png)
+
 _creature factory is a capstone project for BrainStation's web development diploma program_
 
 #### How I deployed via heroku
