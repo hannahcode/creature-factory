@@ -71,8 +71,16 @@
       padding-left: 3rem;
     }
 
-    @include mQ($breakpoint-tablet) {
-      font-size: 1rem;
+    &:hover {
+      color: white;
     }
+
+    &--current:hover {
+      color: $cherry-red;
+    }
+  }
+
+  @include mQ($breakpoint-tablet) {
+    font-size: 1rem;
   }
 }

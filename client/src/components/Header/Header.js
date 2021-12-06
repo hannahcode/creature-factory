@@ -1,7 +1,9 @@
 import "./Header.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const { pathname } = useLocation();
+
   return (
     <header className="header">
       <div className="header__content-container">
@@ -14,10 +16,20 @@ export default function Header() {
           </div>
         </Link>
         <nav className="header__nav">
-          <Link to="/create" className="header__nav-link">
+          <Link
+            to="/create"
+            className={`header__nav-link && ${
+              pathname === "/create" ? "header__nav-link--current" : ""
+            } `}
+          >
             Create
           </Link>
-          <Link to="/gallery" className="header__nav-link">
+          <Link
+            to="/gallery"
+            className={`header__nav-link && ${
+              pathname === "/gallery" ? "header__nav-link--current" : ""
+            } `}
+          >
             Gallery
           </Link>
         </nav>
