@@ -1,0 +1,40 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+
+.gallery-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  border: 3px solid $charcoal;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  max-width: 288px;
+  position: relative;
+  @include mQ($breakpoint-tablet) {
+    margin: 1.25rem;
+  }
+
+  &__creature-title {
+    font-size: 0.813rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__download-button {
+    @include button;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+  }
+
+  &__creature-likes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+  }
+}

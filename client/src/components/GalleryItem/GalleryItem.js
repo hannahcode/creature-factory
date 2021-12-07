@@ -33,9 +33,9 @@ export default function GalleryItem({
   };
 
   return (
-    <div key={creature.id} className="gallery__creature">
-      <div className="gallery__print-container" ref={printRef}>
-        <h2 className="gallery__creature-title">{creature.name}</h2>
+    <div key={creature.id} className="gallery-item">
+      <div className="gallery-item__print-container" ref={printRef}>
+        <h2 className="gallery-item__creature-title">{creature.name}</h2>
         <svg width="133.33" height="233.33">
           <g transform="scale(.66)">
             {Legs[creature.legs]}
@@ -46,24 +46,24 @@ export default function GalleryItem({
       </div>
       <button
         type="button"
-        className="gallery__download-button"
+        className="gallery-item__download-button"
         onClick={handleDownloadImage}
       >
         Download Creature
       </button>
-      <div className="gallery__creature-likes-container">
+      <div className="gallery-item__creature-likes-container">
         <img
           src={upvote}
           alt="up arrow to increase likes"
-          className="gallery__creature-upvote"
+          className="gallery-item__creature-upvote"
           onClick={() => handleUpvote(creature.id)}
           id={creature.id}
         />
-        <p className="gallery__creature-likes">{creature.likes}</p>
+        <p className="gallery-item__creature-likes">{creature.likes}</p>
         <img
           src={downvote}
           alt="down arrow to decrease likes"
-          className="gallery__creature-downvote"
+          className="gallery-item__creature-downvote"
           onClick={() => handleDownvote(creature.id)}
           id={creature.id}
         />
