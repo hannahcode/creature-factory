@@ -4,7 +4,7 @@ Creature Factory is a capstone project for BrainStation's Web Development Diplom
 
 #### Tech Stack
 
-Creature Factory is a React App with an Express/Node.js server. Additional libraries used include: axios, html2canvas, sass, react router dom 6, cors, dotenv, and uuid. Creature parts are made entirely of code, by hand, and integrated as React components.
+Creature Factory is a React App with an Express/Node.js server. Additional libraries used include: axios, html2canvas, sass, react router dom 6, cors, dotenv, and uuid. Creature parts are made of code (svg elements) and integrated as React components.
 
 #### Development Process
 
@@ -12,7 +12,7 @@ For the first phase of developing Creature Factory, I focused on achieving basel
 
 An outline of my entire deployment process can be found at the end of this document, if you are curious. After deploying, I created put endpoints to upvote and downvote creatures, included likes in my creature objects, and added upvote and downvote calls to the front end. Next, I added a way for users to download their creatures as a png file. I used html2canvas to achieve download functionality, and added a download button to each creature component in the gallery. Lastly, I added a cat head that spins when hovered over to the home page, just for kicks.
 
-After the Web Development program ends, I may add additional functionality (TBD) and more creature parts.
+After the Web Development program ends, I plan to add additional functionality (TBD) and more creature parts.
 
 #### Pages
 
@@ -31,9 +31,9 @@ _Example of Creature Gallery Page Item_
 
 In order to view the app online, simply visit https://creature-factory.herokuapp.com/.
 
-In order to run the app locally, first clone the repository from github.
+In order to run the app locally, first download the repository from github.
 
-- Next, open the app in VS code, cd into the client directory and type "npm install" into the command line to get node modules.
+- Next, open the files in VS code, cd into the client directory and type "npm install" into the command line to get node modules.
 - cd into the server directory and do the same.
 - There should not be any node modules needed from the root directory, so the above step is not necessary there.
 - Rename the .env.sample file on the server side to simply .env, and where it says PORT=, add the local address you would like to run the server from (for example, PORT=5000).
