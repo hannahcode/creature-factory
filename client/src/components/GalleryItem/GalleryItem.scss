@@ -14,6 +14,7 @@
   margin-bottom: 1rem;
   max-width: 288px;
   position: relative;
+
   @include mQ($breakpoint-tablet) {
     margin: 1.25rem;
   }
