@@ -2,6 +2,21 @@
 
 Creature Factory is a capstone project for BrainStation's Web Development Diploma Program (Fall 2021). It enables users to make a creature by mixing and matching head, body, and leg parts. Users can see their creature published to a gallery page with other creatures, and may download any creature they wish as a .png file. In addition, creatures can recieve upvotes and downvotes.
 
+#### How to run the app locally and online
+
+In order to view the app online, simply visit https://creature-factory.herokuapp.com/.
+
+In order to run the app locally, first download (or clone) the repository from github.
+
+- Next, open the files in VS code, cd into the client directory and type "npm install" into the command line to get node modules.
+- cd into the server directory and do the same.
+- There should not be any node modules needed from the root directory, so the above step is not necessary there.
+- Rename the .env.sample file on the server side to simply .env, and where it says PORT=, add the local address you would like to run the server from (for example, PORT=5000).
+- Open the index.js file located in client/src/config, and edit the local host address on line 4 to include your preferred port (for example, "http://localhost:5000/creatures").
+- cd into the server directory and type "npm start" in the command line
+- cd into the client directory and type "npm start" in the command line
+- the app should open on your browser, have fun! \*Please note, this app was developed using chrome as the default browser. Although it should function in most popular modern browsers, if you have trouble with the app in a different browser, open it in chrome.
+
 #### Tech Stack
 
 Creature Factory is a React App with an Express/Node.js server. Additional libraries used include: axios, html2canvas, sass, react router dom 6, cors, dotenv, and uuid. Creature parts are made of code (svg elements) and integrated as React components.
@@ -26,21 +41,6 @@ _Section of Create Page_
 
 ![image](https://user-images.githubusercontent.com/70654324/144894191-dd4a9cdc-7f70-430b-a2e8-2ec81003f466.png)
 _Example of Creature Gallery Page Item_
-
-#### How to run the app locally and online
-
-In order to view the app online, simply visit https://creature-factory.herokuapp.com/.
-
-In order to run the app locally, first download the repository from github.
-
-- Next, open the files in VS code, cd into the client directory and type "npm install" into the command line to get node modules.
-- cd into the server directory and do the same.
-- There should not be any node modules needed from the root directory, so the above step is not necessary there.
-- Rename the .env.sample file on the server side to simply .env, and where it says PORT=, add the local address you would like to run the server from (for example, PORT=5000).
-- Open the index.js file located in client/src/config, and edit the local host address on line 4 to include your preferred port (for example, "http://localhost:5000/creatures").
-- cd into the server directory and type "npm start" in the command line
-- cd into the client directory and type "npm start" in the command line
-- the app should open on your browser, have fun! \*Please note, this app was developed using chrome as the default browser. Although it should function in most popular modern browsers, if you have trouble with the app in a different browser, open it in chrome.
 
 #### Endpoints
 
