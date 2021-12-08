@@ -7,6 +7,7 @@ import { Bodies } from "../../components/Bodies";
 import { Legs } from "../../components/Legs";
 import { API_URL } from "../../config";
 
+
 export default function Create() {
   const [name, setName] = useState("");
   const [head, setHead] = useState(0);
